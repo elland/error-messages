@@ -47,11 +47,8 @@
 
 
 <h2>The Messages</h2>
-
-<script src="./js/tablefilter.js"></script>
-
-<table class="message-list" width="100%">
-    <tr><th>Nr.</th><th>Message</th><th>Summary</th><th>Since</th></tr>
+<table>
+    <tr><th>Nr.</th><th>Message</th><th>Summary</th><th>Introduced</th></tr>
     
         <tr>
             <td>GHC-01629</td>
@@ -82,13 +79,6 @@
         </tr>
     
         <tr>
-            <td>GHC-11861</td>
-            <td><a href="./messages/GHC-11861/index.html">Empty single quotes</a></td>
-            <td>No character literal provided within single quotes</td>
-            <td>9.6.1</td>
-        </tr>
-    
-        <tr>
             <td>GHC-11913</td>
             <td><a href="./messages/GHC-11913/index.html">Illegal deriving item</a></td>
             <td>Something other than a type class appears in a deriving statement.</td>
@@ -99,20 +89,6 @@
             <td>GHC-20125</td>
             <td><a href="./messages/GHC-20125/index.html">Missing field(s)</a></td>
             <td>Initialization of record with missing field(s).</td>
-            <td>9.6.1</td>
-        </tr>
-    
-        <tr>
-            <td>GHC-20825</td>
-            <td><a href="./messages/GHC-20825/index.html">Empty record update</a></td>
-            <td>Record update syntax requires that at least one field be specified.</td>
-            <td>9.6.1</td>
-        </tr>
-    
-        <tr>
-            <td>GHC-25078</td>
-            <td><a href="./messages/GHC-25078/index.html">Precedence out of range</a></td>
-            <td>An invalid operator precedence was provided.</td>
             <td>9.6.1</td>
         </tr>
     
@@ -138,13 +114,6 @@
         </tr>
     
         <tr>
-            <td>GHC-45696</td>
-            <td><a href="./messages/GHC-45696/index.html">If-Then-Else in pattern match</a></td>
-            <td>If-Then-Else in pattern match</td>
-            <td>9.6.1</td>
-        </tr>
-    
-        <tr>
             <td>GHC-46956</td>
             <td><a href="./messages/GHC-46956/index.html">Kind variable would escape its scope</a></td>
             <td>A local kind variable was used to classify a type from a scope in which the kind variable is not available.</td>
@@ -166,30 +135,9 @@
         </tr>
     
         <tr>
-            <td>GHC-48099</td>
-            <td><a href="./messages/GHC-48099/index.html">Top-level strict or unlifted binds not allowed</a></td>
-            <td>Top-level bindings may not be strict, and they may not have unlifted types.</td>
-            <td>9.6.1</td>
-        </tr>
-    
-        <tr>
-            <td>GHC-48361</td>
-            <td><a href="./messages/GHC-48361/index.html">Binding type variables is not allowed in pattern bindings</a></td>
-            <td>You can only bind value-level variables in a pattern, not type variables.</td>
-            <td>9.6.1</td>
-        </tr>
-    
-        <tr>
             <td>GHC-56538</td>
             <td><a href="./messages/GHC-56538/index.html">Instance head is not headed by a class</a></td>
             <td>A type class instance declaration is declared for something that is not a type class</td>
-            <td>9.6.1</td>
-        </tr>
-    
-        <tr>
-            <td>GHC-62016</td>
-            <td><a href="./messages/GHC-62016/index.html">Cannot derive well-kinded instance</a></td>
-            <td>An instance cannot be derived because the kinds cannot be made to match.</td>
             <td>9.6.1</td>
         </tr>
     
@@ -222,13 +170,6 @@
         </tr>
     
         <tr>
-            <td>GHC-71614</td>
-            <td><a href="./messages/GHC-71614/index.html">Lambda requires at least one parameter</a></td>
-            <td>A lambda expression must have at least one parameter.</td>
-            <td>9.6.1</td>
-        </tr>
-    
-        <tr>
             <td>GHC-75356</td>
             <td><a href="./messages/GHC-75356/index.html">Export item suggests constructors/methods</a></td>
             <td>An export item suggests that (in-scope) constructors or class methods exist when they do not.</td>
@@ -239,13 +180,6 @@
             <td>GHC-76037</td>
             <td><a href="./messages/GHC-76037/index.html">Not in scope</a></td>
             <td>An identifier is not in scope.</td>
-            <td>9.6.1</td>
-        </tr>
-    
-        <tr>
-            <td>GHC-77037</td>
-            <td><a href="./messages/GHC-77037/index.html">No explicit import list</a></td>
-            <td>Items brought into scope are not listed explicitly</td>
             <td>9.6.1</td>
         </tr>
     
@@ -294,20 +228,6 @@
 </table>
 
 
-<script>
-var filtersConfig = {
-    base_path: '/wrong-on-purpose/',
-    auto_filter: {
-        delay: 1100 //milliseconds
-    },
-    single_filter: true
-};
-var tf = new TableFilter(document.querySelector('.message-list'), filtersConfig);
-tf.init();
-
-document.querySelector('.single_flt').setAttribute("placeholder", "🔍 type here to filter");
-document.querySelector('.single_flt').focus();
-</script>
         </main>
 
         <footer>
